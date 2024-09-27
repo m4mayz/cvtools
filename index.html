@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Tools by Amayy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="message"></div>
+    <div class="container">
+        <h1>CV Tools by Amayy</h1>
+        <form id="contactForm">
+            <input type="file" id="fileInput" multiple accept=".txt, .csv" required>
+            <ul id="fileList"></ul>
+
+            <label for="maxContacts">Max CTC per file:</label>
+            <input type="number" id="maxContacts" name="maxContacts" min="1" value="1000" required>
+            
+            <label for="prefixStart">Penomoran file dimulai:</label>
+            <input type="number" id="prefixStart" name="prefixStart" min="1" value="1" required>
+            
+            <label for="nameFile">Nama file:</label>
+            <input type="text" id="nameFile" name="nameFile">
+
+            <label for="nameContacts">Nama CTC:</label>
+            <input type="text" id="nameContacts" name="nameContacts" required>
+
+            <button type="button" id="convertBtn">Convert to VCF</button>
+        </form>
+    </div>
+    <div class="container">
+        <h1>Admin & Navvy</h1>
+        <form id="contactForm">
+            <label for="ctcAdmin">Admin Contacts:</label>
+            <textarea id="ctcAdmin" name="ctcAdmin" rows="5"></textarea>
+            
+            <label for="ctcNavy">Navvy Contacts:</label>
+            <textarea id="ctcNavy" name="ctcNavy" rows="5"></textarea>
+
+            <button type="button" id="convertBtnAdmin">Convert to VCF</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</body>
+</html>
